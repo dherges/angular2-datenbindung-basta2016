@@ -1,0 +1,15 @@
+<nav class="navbar navbar-default">
+    <ul class="nav navbar-nav">
+        <li><a [routerLink]="['home']">Home</a></li>
+        <li><a [routerLink]="['flight-booking/flight-search']">Flug buchen</a></li>
+        <li><a [routerLink]="[{outlets: { aux: 'history' }}]">Activate History</a></li>
+        <li><a [routerLink]="[{outlets: { aux: null }}]">Deactivate History</a></li>
+    </ul>
+</nav>
+
+<div class="container">
+    <router-outlet></router-outlet>
+
+    <hr width="10">
+    <router-outlet name="aux"></router-outlet>
+</div>
